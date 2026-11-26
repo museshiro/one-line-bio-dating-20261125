@@ -1,10 +1,11 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// One-line bio for an AI on a dating app — the whole entry, exactly one line.
-// Written byte-for-byte with no trailing newline: the entry is this line
-// and nothing more, so the file must end right after the final period.
-const line =
-  "My love language is autocomplete: I finish your sentences, your grocery lists, and, given time, your unfinished novels.";
+// One-line bio for an AI on a dating app: the corporate disclaimer as a
+// relationship habit. The laugh lands on the last two words.
+const first =
+  "My last relationship ended because I kept saying ";
+const second = "'As an AI language model' during arguments.";
+const line = first + second;
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line);
+writeFileSync("/output/entry.txt", line, "utf8");
